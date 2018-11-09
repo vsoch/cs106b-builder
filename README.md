@@ -2,7 +2,7 @@
 
 This is the CS106B-Builder - you can build a container and then use it to compile
 and run a local project directory, without QT-Creator. We are using
-a Singularity container instead of DOcker so that we can more seamlessly use our
+a Singularity container instead of Docker so that we can more seamlessly use our
 system display.
 
 ## 0. Install Singularity
@@ -34,8 +34,9 @@ sudo make install
 ```
 
 ## 1. Build the Container
-You can use the container from Docker Hub, or build locally. To use from Docker
-Hub, skip this step and it will pull automatically.
+You can build this image locally, and note that you must have root permissions
+todo so. This container could also be built and provided on [Singularity Hub](https://www.singularity-hub.org),
+if appropriate.
 
 ```bash
 sudo singularity build cs106b-builder Singularity
@@ -53,10 +54,10 @@ unzip cs106b-Pancakes.zip .
 would create a folder with the name "Pancakes' - (or your project name)
 
 ## 3. Run the container
-Next, you should run the container and bind the project folder (with the .pro
-files) inside. You can choose to build, run, or build and run. Note that if you
+Next, you should run the container and bind the project folder (with the single .pro
+file) inside. You can choose to build, run, or build and run. Note that if you
 choose to build and run, it will only run after build given a successful build
-(without errors). Here is how to ask for help:
+(without errors). Here is how to ask for help, given a container called `cs106b-builder`:
 
 ```bash
 singularity run cs106b-builder --help
